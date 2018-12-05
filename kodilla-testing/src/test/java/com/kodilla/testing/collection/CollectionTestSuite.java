@@ -53,6 +53,6 @@ public class CollectionTestSuite{
         System.out.println("Testing normal list");
 
         //Then
-            Assert.assertEquals(expectedResultList, evenList);
+        Assert.assertEquals(expectedResultList, evenList);
     }
 }
