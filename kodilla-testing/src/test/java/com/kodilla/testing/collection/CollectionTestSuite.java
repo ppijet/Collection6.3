@@ -27,7 +27,7 @@ public class CollectionTestSuite {
         ArrayList<Integer> emptyList = new ArrayList<>();
         //When
         List<Integer> resultList = oddNumbersExterminator.exterminate(emptyList);
-        System.out.println("Testing EMPTY LIST");
+        System.out.println("Testing >>EMPTY LIST<<");
         //Then
         Assert.assertEquals(emptyList, resultList);
     }
@@ -50,7 +50,7 @@ public class CollectionTestSuite {
 
         //When
         List<Integer> evenList = oddNumbersExterminator.exterminate(normalList);
-        System.out.println("Testing NORMAL LIST");
+        System.out.println("Testing >>NORMAL LIST<<");
 
         //Then
         Assert.assertEquals(expectedResultList, evenList);
