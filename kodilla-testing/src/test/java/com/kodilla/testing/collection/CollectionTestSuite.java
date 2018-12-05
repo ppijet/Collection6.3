@@ -5,7 +5,7 @@ import org.junit.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CollectionTestSuite{
+public class CollectionTestSuite {
 
     private static OddNumbersExterminator oddNumbersExterminator;
 
@@ -22,7 +22,7 @@ public class CollectionTestSuite{
     }
 
     @Test
-    public void testOddNumbersExterminatorEmptyList(){
+    public void testOddNumbersExterminatorEmptyList() {
         //Given
         ArrayList<Integer> emptyList = new ArrayList<>();
         //When
