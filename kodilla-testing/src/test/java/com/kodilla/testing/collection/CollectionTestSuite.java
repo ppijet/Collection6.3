@@ -58,5 +58,6 @@ public class CollectionTestSuite {
 
         //Then
         Assert.assertEquals(expectedResultList, evenList);
+        Assert.assertEquals(5, evenList.size());
     }
 }
