@@ -10,7 +10,7 @@ import java.util.List;
 
 public class CollectionTestSuite {
 
-    OddNumbersExterminator numbersChecking = new OddNumbersExterminator();
+
     @Before
     public void before(){
 
@@ -28,6 +28,7 @@ public class CollectionTestSuite {
 
 
         //Given
+        OddNumbersExterminator numbersChecking = new OddNumbersExterminator();
         ArrayList<Integer> emptyList = new ArrayList<>();
         //When
         List<Integer> resultList = numbersChecking.exterminate(emptyList);
@@ -40,6 +41,7 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorNormalList() {
 
         //Given
+        OddNumbersExterminator evenSort = new OddNumbersExterminator();
         ArrayList<Integer> normalList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             normalList.add(i);
@@ -53,7 +55,7 @@ public class CollectionTestSuite {
         expectedResultList.add(8);
 
         //When
-        List<Integer> evenList = numbersChecking.exterminate(normalList);
+        List<Integer> evenList = evenSort.exterminate(normalList);
         System.out.println("Testing >>NORMAL LIST<<");
 
         //Then
