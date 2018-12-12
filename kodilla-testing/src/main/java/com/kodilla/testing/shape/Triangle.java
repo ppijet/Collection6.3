@@ -3,18 +3,20 @@ package com.kodilla.testing.shape;
 import java.util.Objects;
 
 public class Triangle implements Shape{
-
+    private String shapeName;
     private double sideA;
     private double sideH;
 
     public Triangle(double sideA, double sideH) {
+        this.shapeName = "Triangle";
         this.sideA = sideA;
         this.sideH = sideH;
     }
 
     public String getShapeName(){
-        return "Triangle";
+        return shapeName;
     }
+
     public double getField(){
         return (sideA*sideH)/2;
     }
@@ -36,7 +38,8 @@ public class Triangle implements Shape{
     @Override
     public String toString() {
         return "Triangle{" +
-                "sideA=" + sideA +
+                "shapeName='" + shapeName + '\'' +
+                ", sideA=" + sideA +
                 ", sideH=" + sideH +
                 '}';
     }

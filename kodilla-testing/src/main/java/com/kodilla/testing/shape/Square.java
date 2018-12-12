@@ -3,16 +3,18 @@ package com.kodilla.testing.shape;
 import java.util.Objects;
 
 public class Square  implements Shape{
-
+    private String shapeName;
     private double sideA;
 
     public Square(double sideA) {
+        this.shapeName = "Square";
         this.sideA = sideA;
     }
 
     public String getShapeName(){
-        return "Square";
+        return shapeName;
     }
+
     public double getField(){
         return sideA*sideA;
     }
@@ -33,7 +35,8 @@ public class Square  implements Shape{
     @Override
     public String toString() {
         return "Square{" +
-                "sideA=" + sideA +
+                "shapeName='" + shapeName + '\'' +
+                ", sideA=" + sideA +
                 '}';
     }
 }
