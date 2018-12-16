@@ -23,7 +23,7 @@ public class ForumTestSuite {
     @Test
     public void testCaseUsername() {
         //Given
-        SimpleUser simpleUser = new SimpleUser("theForumUser", "Jarosław Kaczyński");
+        SimpleUser simpleUser = new SimpleUser("theForumUser", "Jaroslaw Kaczynski");
         //When
         String result = simpleUser.getUserName();
         System.out.println("Testing " + result);
@@ -33,11 +33,11 @@ public class ForumTestSuite {
     @Test
     public void testCaseRealName(){
         //Given
-        SimpleUser simpleUser = new SimpleUser("theForumUser","Jarosław Kaczyński");
+        SimpleUser simpleUser = new SimpleUser("theForumUser","Jaroslaw Kaczynski");
         //When
         String result = simpleUser.getRealName();
         System.out.println("Testing " + result);
         // Then
-        Assert.assertEquals("Jarosław Kaczyński", result);
+        Assert.assertEquals("Jaroslaw Kaczynski", result);
     }
 }

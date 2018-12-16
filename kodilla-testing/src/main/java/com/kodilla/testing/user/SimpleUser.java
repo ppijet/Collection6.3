@@ -2,8 +2,8 @@ package com.kodilla.testing.user;
 
 public class SimpleUser {
 
-    private String username;
-    private String realName;
+    String username;
+    String realName;
 
     public SimpleUser(String username, String realName){
 
@@ -17,6 +17,7 @@ public class SimpleUser {
     }
 
     public String getRealName() {
+
         return realName;
     }
 
