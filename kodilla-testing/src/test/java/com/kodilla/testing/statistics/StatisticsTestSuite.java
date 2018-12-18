@@ -130,7 +130,7 @@ public class StatisticsTestSuite {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> forumUserList = new ArrayList<>();
         String user = "User no. ";
-        for(int n = 1; n <= 50 ; n++){
+        for(int n = 0; n < 50 ; n++){
             user = user + n;
             forumUserList.add(user);
         }
