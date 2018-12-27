@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.statistics.StatisticsTestSuite" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-12-26T11:43:57" hostname="Piter-Komputer" time="0.032">
+  <properties/>
+  <testcase name="testZeroComments" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.014"/>
+  <testcase name="testMorePostThanComments" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.004"/>
+  <testcase name="testMoreCommentsThanPost" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.003"/>
+  <testcase name="testZeroPosts" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.002"/>
+  <testcase name="testHundredUsers" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.002"/>
+  <testcase name="testZeroUsers" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.003"/>
+  <testcase name="testThousandPosts" classname="com.kodilla.testing.statistics.StatisticsTestSuite" time="0.003"/>
+  <system-out><![CDATA[The tests are beggining
+Test number: 1
+The last year our forum visited 50 users, whose wrote 1000 messages and posted 0 comments.
+average number of posts per users: 20
+average number of comments per user: 0
+average number of comments per post: 0.0
+End of the test number: 1
+Test number: 2
+The last year our forum visited 50 users, whose wrote 600 messages and posted 200 comments.
+average number of posts per users: 12
+average number of comments per user: 4
+average number of comments per post: 0.3333333333333333
+End of the test number: 2
+Test number: 3
+The last year our forum visited 50 users, whose wrote 200 messages and posted 600 comments.
+average number of posts per users: 4
+average number of comments per user: 12
+average number of comments per post: 3.0
+End of the test number: 3
+Test number: 4
+The last year our forum visited 50 users, whose wrote 0 messages and posted 0 comments.
+average number of posts per users: 0
+average number of comments per user: 0
+average number of comments per post: 0.0
+End of the test number: 4
+Test number: 5
+The last year our forum visited 100 users, whose wrote 600 messages and posted 200 comments.
+average number of posts per users: 6
+average number of comments per user: 2
+average number of comments per post: 0.3333333333333333
+End of the test number: 5
+Test number: 6
+The last year our forum visited 0 users, whose wrote 0 messages and posted 0 comments.
+average number of posts per users: 0
+average number of comments per user: 0
+average number of comments per post: 0.0
+End of the test number: 6
+Test number: 7
+The last year our forum visited 50 users, whose wrote 1000 messages and posted 100 comments.
+average number of posts per users: 20
+average number of comments per user: 2
+average number of comments per post: 0.1
+End of the test number: 7
+The tests have been completed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
