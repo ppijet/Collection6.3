@@ -1,27 +1,19 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.lambda.ExpressionExecutor;
-import com.kodilla.stream.reference.FunctionalCalculator;
+
+import com.kodilla.stream.beutifier.PoemBeautifier;
 
 public class StreamMain {
 
     public static void main(String[]args) {
 
-        ExpressionExecutor expressionExecutor = new ExpressionExecutor();
+        PoemBeautifier poemBeautifier = new PoemBeautifier();
 
-        System.out.println("Calculating expressions with lambdas");
-
-        expressionExecutor.executeExpression(10,5,(a,b) -> a + b);
-        expressionExecutor.executeExpression(10,5,(a,b) -> a - b);
-        expressionExecutor.executeExpression(10,5,(a,b) -> a * b);
-        expressionExecutor.executeExpression(10,5,(a,b) -> a / b);
-
-        System.out.println("Calculating expressions with method references");
-
-        expressionExecutor.executeExpression(3,4, FunctionalCalculator::multiplyAByB);
-        expressionExecutor.executeExpression(3,4,FunctionalCalculator::addAToB);
-        expressionExecutor.executeExpression(3,4,FunctionalCalculator::subBFromA);
-        expressionExecutor.executeExpression(3,4,FunctionalCalculator::divideAByB);
-
+        poemBeautifier.beautify("Tottenham HotSpur", team -> "◄◄◄" + team + "►►►");
+        poemBeautifier.beautify("Tottenham HotSpur", team ->  team + "®");
+        poemBeautifier.beautify("Real Madrid", team -> '♚' + team);
+        poemBeautifier.beautify("Raków Częstochowa", team -> team.toUpperCase());
+        poemBeautifier.beautify("Skra Częstochowa", team -> team.toLowerCase());
+        poemBeautifier.beautify("Ajax Amsterdam", team -> team.replace("Amsterdam","Częstochowa"));
     }
 }
