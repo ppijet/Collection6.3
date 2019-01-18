@@ -3,30 +3,29 @@ package com.kodilla.stream.array;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Random;
+
 public class ArrayOperationsTestSuite {
 
     @Test
 
-    public void testGetAverage(){
+    public void testGetAverage() {
 
         //Given
-        int[] numbers = new int[10];
-        numbers[0] = 5;
-        numbers[1] = 2;
-        numbers[2] = 13;
-        numbers[3] = 23;
-        numbers[4] = 14;
-        numbers[5] = 4;
-        numbers[6] = 19;
-        numbers[7] = 71;
-        numbers[8] = 9;
-        numbers[9] = 56;
+        Random generatorNumbers = new Random();
+        int sum = 0;
+        int numbers[] = new int[20];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = generatorNumbers.nextInt(100);
+            sum += numbers[i];
+        }
 
-        //When
-        double numbersAverage = ArrayOperations.getAverage(numbers);
+            //When
+            double numbersAverage = ArrayOperations.getAverage(numbers);
+            double expectedAverage = (double) sum / numbers.length;
+            //Then
+            Assert.assertEquals(expectedAverage, numbersAverage, 0.1);
 
-        //Then
-        Assert.assertEquals(21.6,numbersAverage,0.1);
-        Assert.assertEquals(10, numbers.length);
+
     }
 }
