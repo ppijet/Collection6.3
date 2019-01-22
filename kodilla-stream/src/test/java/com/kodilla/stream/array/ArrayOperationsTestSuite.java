@@ -24,7 +24,7 @@ public class ArrayOperationsTestSuite {
             double numbersAverage = ArrayOperations.getAverage(numbers);
             double expectedAverage = (double) sum / numbers.length;
             //Then
-            Assert.assertEquals(expectedAverage, numbersAverage, 0.1);
+            Assert.assertEquals(expectedAverage, numbersAverage, 0.01);
 
 
     }
