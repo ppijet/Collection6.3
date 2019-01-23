@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 public class BoardTestSuite {
 
     public Board prepareTestData(){
@@ -145,5 +147,56 @@ public class BoardTestSuite {
 
         //Then
         Assert.assertEquals(2,longTasks);
+    }
+
+    @Test
+
+    public void testAddTaskListAverageWorkingOnTask(){
+
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+
+        long quantityOfDays = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .mapToLong(task -> DAYS.between(task.getCreated(), LocalDate.now()))
+                .sum();
+
+        long quantityOfTasks = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .count();
+
+        double avg = quantityOfDays/quantityOfTasks;
+
+        //Then
+        Assert.assertEquals(3, quantityOfTasks);
+        Assert.assertEquals(30, quantityOfDays);
+        Assert.assertEquals(10, avg,0.01);
+    }
+
+    @Test
+
+    public void testAddTaskListAverageWorkingOnTask2(){
+
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+
+        double avg = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .mapToLong(task -> DAYS.between(task.getCreated(), LocalDate.now()))
+                .average().getAsDouble();
+        //Then
+        Assert.assertEquals(10,avg,0.01);
+
     }
 }
