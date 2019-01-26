@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.time.temporal.ChronoUnit.DAYS;
-
 public class BoardTestSuite {
 
     public Board prepareTestData(){
@@ -162,8 +160,10 @@ public class BoardTestSuite {
 
         long quantityOfDays = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
-                .flatMap(tl -> tl.getTasks().stream())
-                .mapToLong(task -> DAYS.between(task.getCreated(), LocalDate.now()))
+                .flatMap(task -> task.getTasks().stream())
+                .map(date -> date.getCreated())
+                .mapToLong(days -> days.until(LocalDate.now()).getDays())
+                //.mapToLong(days->LocalDate.now().getDayOfYear()-(days.getCreated().getDayOfYear()))
                 .sum();
 
         long quantityOfTasks = project.getTaskLists().stream()
@@ -177,6 +177,7 @@ public class BoardTestSuite {
         Assert.assertEquals(3, quantityOfTasks);
         Assert.assertEquals(30, quantityOfDays);
         Assert.assertEquals(10, avg,0.01);
+
     }
 
     @Test
@@ -192,11 +193,12 @@ public class BoardTestSuite {
 
         double avg = project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
-                .flatMap(tl -> tl.getTasks().stream())
-                .mapToLong(task -> DAYS.between(task.getCreated(), LocalDate.now()))
+                .flatMap(task -> task.getTasks().stream())
+                .map(date -> date.getCreated())
+                .mapToDouble(days -> LocalDate.now().compareTo(days))
                 .average().getAsDouble();
         //Then
         Assert.assertEquals(10,avg,0.01);
-
+        System.out.println(avg);
     }
 }
