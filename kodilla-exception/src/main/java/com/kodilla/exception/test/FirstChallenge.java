@@ -13,8 +13,13 @@ public class FirstChallenge {
     public static void main(String[]args){
 
         FirstChallenge firstChallenge = new FirstChallenge();
-        double result = firstChallenge.divide(3,0);
 
-        System.out.println(result);
-    }
+       try {double result = firstChallenge.divide(3,0);
+       System.out.println(result);
+        } catch (ArithmeticException a){
+           System.out.println(a + ": Divide by 0 is impossible");
+       } finally {
+           System.out.println("Remember: Math is the Queen of Science !!!");
+       }
+       }
 }
