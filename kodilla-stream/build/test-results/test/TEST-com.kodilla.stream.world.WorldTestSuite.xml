@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.world.WorldTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-28T17:38:53" hostname="Piter-Komputer" time="0.008">
+  <properties/>
+  <testcase name="testGetPeopleQuantity" classname="com.kodilla.stream.world.WorldTestSuite" time="0.008"/>
+  <system-out><![CDATA[The tests are beggining
+Test processing - counting population 
+The tests have been completed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-28T17:38:53" hostname="Piter-Komputer" time="0.102">
+  <properties/>
+  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.102"/>
+  <system-out><![CDATA[35
+74
+28
+7
+50
+16
+23
+65
+81
+72
+81
+38
+65
+14
+71
+8
+9
+68
+89
+97
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
