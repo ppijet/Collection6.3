@@ -26,7 +26,6 @@ public class FlightSearcher {
         } else {
             System.out.println("Change departure time");
         }
-
         return ourFlight;
     }
 }

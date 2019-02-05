@@ -7,7 +7,7 @@ public class FlightSearcherRunner {
         FlightSearcher searcher = new FlightSearcher();
         boolean checkStatus = false;
         try {
-            searcher.findFlight(new Flight ("Bytom" , "Warsaw"));
+            searcher.findFlight(new Flight ("Bytom" ,"Warsaw"));
             checkStatus = true;
 
         } catch (RouteNotFoundException e) {
