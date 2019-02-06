@@ -2,22 +2,22 @@ package com.kodilla.exception.test;
 
 public class FlightSearcherRunner {
 
-    public static void main (String [] args){
+    public static void main(String[] args) {
 
         FlightSearcher searcher = new FlightSearcher();
-        boolean checkStatus = false;
+        boolean isFlyTime = false;
+
         try {
-            searcher.findFlight(new Flight ("Bytom" ,"Warsaw"));
-            checkStatus = true;
+            isFlyTime = searcher.findFlight(new Flight("Bytom", "Warsaw"));
 
         } catch (RouteNotFoundException e) {
             System.out.println(e.routeNotFoundException());
 
         } finally {
-            if (checkStatus) {
+            if (isFlyTime) {
                 System.out.println("Thank's for choosing OLT Express");
             } else {
-                System.out.println("You have to change airlines");
+                System.out.println("Sorry you must change Airways ;-(");
             }
         }
     }
